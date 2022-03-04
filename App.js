@@ -1,5 +1,5 @@
 import { React, useState } from 'react';
-import { StyleSheet, Text, View, TextInput, TouchableOpacity } from 'react-native';
+import { StyleSheet, Text, View, TextInput, TouchableOpacity, Image } from 'react-native';
 
 export default function App() {
   const [valor1, setValor1] = useState();
@@ -13,6 +13,12 @@ export default function App() {
   return (
     <View style={styles.container}>
       <Text style={styles.texto}>Olá mundo!</Text>
+      <Image
+        style={styles.logo}
+        source={{
+          uri: 'https://cdn-icons-png.flaticon.com/512/346/346399.png',
+        }}
+      />
       <View style={styles.bloco}>
         <Text style={styles.textoBloco}>Valor 1</Text>
         <TextInput 
@@ -79,5 +85,9 @@ const styles = StyleSheet.create({
   textoBotao:{
     color:"#fff",
     fontSize:30
+  }, 
+  logo:{
+    width:50,
+    height:50
   }
 });
